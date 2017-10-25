@@ -1,4 +1,4 @@
-/* nvd3 version 1.8.6-dev (https://github.com/novus/nvd3) 2017-10-14 */
+/* nvd3 version 1.8.6-dev (https://github.com/novus/nvd3) 2017-10-25 */
 (function(){
 
 // set up main nv object
@@ -7429,7 +7429,7 @@ nv.models.legend = function() {
                                 if (data.every(function(series) { return series.disabled})) {
                                     //the default behavior of NVD3 legends is, if every single series
                                     // is disabled, turn all series' back on.
-                                    data.forEach(function(series) { series.disabled = false});
+                                    //data.forEach(function(series) { series.disabled = false});
                                 }
                             }
                         } else if(vers == 'furious') {
@@ -7445,7 +7445,7 @@ nv.models.legend = function() {
                                     //the default behavior of NVD3 legends is, if every single series
                                     // is disabled, turn all series' back on.
                                     data.forEach(function(series) {
-                                        series.disabled = series.userDisabled = false;
+                                        //series.disabled = series.userDisabled = false;
                                     });
                                 }
                             }
