@@ -108,7 +108,8 @@ nv.models.furiousLegend = function() {
                                 if (data.every(function(series) { return series.disabled})) {
                                     //the default behavior of NVD3 legends is, if every single series
                                     // is disabled, turn all series' back on.
-                                    data.forEach(function(series) { series.disabled = false});
+									// INTECH - behavior not desired
+                                    //data.forEach(function(series) { series.disabled = false});
                                 }
                             }
                         } else if(vers == 'furious') {
@@ -123,8 +124,9 @@ nv.models.furiousLegend = function() {
                                 if (engaged.every(function(series) { return series.userDisabled })) {
                                     //the default behavior of NVD3 legends is, if every single series
                                     // is disabled, turn all series' back on.
+									// INTECH - behavior not desired
                                     data.forEach(function(series) {
-                                        series.disabled = series.userDisabled = false;
+                                        ///series.disabled = series.userDisabled = false;
                                     });
                                 }
                             }
