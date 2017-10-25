@@ -105,12 +105,12 @@ nv.models.furiousLegend = function() {
                             }
                             else {
                                 d.disabled = !d.disabled;
-                                if (data.every(function(series) { return series.disabled})) {
-                                    //the default behavior of NVD3 legends is, if every single series
-                                    // is disabled, turn all series' back on.
-									// INTECH - behavior not desired
-                                    //data.forEach(function(series) { series.disabled = false});
-                                }
+                                // if (data.every(function(series) { return series.disabled})) {
+                                    // //the default behavior of NVD3 legends is, if every single series
+                                    // // is disabled, turn all series' back on.
+									// // INTECH - behavior not desired
+                                    // data.forEach(function(series) { series.disabled = false});
+                                // }
                             }
                         } else if(vers == 'furious') {
                             if(expanded) {
@@ -121,14 +121,14 @@ nv.models.furiousLegend = function() {
                                 d.disabled = !d.disabled;
                                 d.userDisabled = d.disabled;
                                 var engaged = data.filter(function(d) { return !d.disengaged; });
-                                if (engaged.every(function(series) { return series.userDisabled })) {
+                                //if (engaged.every(function(series) { return series.userDisabled })) {
                                     //the default behavior of NVD3 legends is, if every single series
                                     // is disabled, turn all series' back on.
 									// INTECH - behavior not desired
-                                    data.forEach(function(series) {
-                                        ///series.disabled = series.userDisabled = false;
-                                    });
-                                }
+                                    // data.forEach(function(series) {
+                                        // series.disabled = series.userDisabled = false;
+                                    // });
+                                //}
                             }
                         }
                         dispatch.stateChange({
